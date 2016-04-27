@@ -1,83 +1,18 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="author" content="智能社 - zhinengshe.com" />
-<meta name="copyright" content="智能社 - zhinengshe.com" />
-<title>智能社 - www.zhinengshe.com</title>
-<style>
-*{ margin:0; padding:0; list-style:none; font-family: "微软雅黑","张海山锐线体简"}
-body{ background:#000;}
-#div1{width:500px;height:500px; border: #000 solid 1px; border-radius:50%; position:absolute;left:30%;top:10%;}
-#div1 img{width:100px;height:100px;border-radius:50%; position:absolute;}
-input{ width:60px; height:60px; font-size:20px; position:absolute;left:50%;top:50%; border-radius:50%; background:#666; outline:none; border:none; margin-left:-30px; margin-top:-30px; color:#fff; font-weight:bold; cursor:pointer;}
-</style>
-
+<title>圆形菜单</title>
+<link href="../css/works.css" rel="stylesheet" />
+<script src="../js/works.js"></script>
 <script>
 window.onload=function(){
-	var oDiv=document.getElementById('div1');
-	var oBtn=document.getElementById('btn1');
-	var aImg=oDiv.getElementsByTagName("img");
-	var bl=true;
-	
-	for(var i=0;i<aImg.length;i++){
-		/*var oBox=document.createElement('div');
-		oBox.className='sBox';
-		document.body.appendChild(oBox);
-		setPos(oBox,0);	//定位小圆到弧线上
-		oBox.rotate=0;*/
-		setPos(aImg[i],0);
-		aImg[i].rotate=0;
-	}
-	
-	function move(obj,iTarget){
-		var start=obj.rotate;
-		var dis=iTarget-start;
-		var count=Math.round(700/30);
-		var n=0;
-		clearInterval(obj.timer);
-		obj.timer=setInterval(function(){
-			n++;
-			var a=1-n/count;
-			var cur=start+dis*(1-a*a*a);
-			setPos(obj,cur);
-			obj.rotate=cur;
-			if(n==count){
-				clearInterval(obj.timer);	
-			}
-		},30);
-	};
-	oBtn.onclick=function(){
-		if(bl){
-			for(var i=0;i<aImg.length;i++){
-				move(aImg[i],i*(360/(aImg.length)));
-			}
-			bl=false;
-			this.value="收起";	
-		}else{
-			for(var i=0;i<aImg.length;i++){
-				move(aImg[i],0);
-			}
-			bl=true;
-			this.value="展开";
-		}
-	};
-	function setPos(obj,ang){
-		var a=Math.sin(a2r(ang))*oDiv.offsetWidth/2;
-		var b=Math.cos(a2r(ang))*oDiv.offsetHeight/2;
-		obj.style.left=oDiv.offsetWidth/2-aImg[0].offsetWidth/2+a+'px';
-		obj.style.top=oDiv.offsetHeight/2-aImg[0].offsetHeight/2-b+'px';
-	};
-	function a2r(n){
-		return 	n*Math.PI/180;
-	};
+	pathmenu("pathmenu","pathmenubtn1");
 };
 </script>
 </head>
-
-<body>
-
-<div id="div1">
+<body style="background:#000;">
+<div id="pathmenu">
 	<img src="../images/14.jpg" />
     <img src="../images/22.jpg" />
     <img src="../images/46.jpg" />
@@ -90,8 +25,7 @@ window.onload=function(){
     <img src="../images/62.jpg" />
     <img src="../images/63.jpg" />
     <img src="../images/50.jpg" />
-	<input type="button" value="展开" id="btn1">
+	<input type="button" value="展开" id="pathmenubtn1">
 </div>
-
 </body>
 </html>

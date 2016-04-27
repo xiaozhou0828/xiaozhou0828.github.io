@@ -3,67 +3,16 @@
 <head>
 <meta charset="utf-8">
 <title>放大镜</title>
-<style>
-*{ margin:0; padding:0;}
-body{ background:#000;}
-#div1{ width:600px; height:337px; margin:150px 0 0 80px; position:relative;}
-#div1 .img1{ width:600px; height:337px;}
-#mark{ width:120px; height:120px; background:green; opacity:0.5; position:absolute; left:;0; top:0; display:none; cursor:pointer;}
-#div2{ width:600px; height:337px; position:absolute; left:610px; top:0; overflow:hidden; display:none;}
-#div2 img{ position:absolute; left:0; top:0; zoom:1;}
-</style>
-</head>
+<link href="../css/works.css" rel="stylesheet" />
+<script src="../js/works.js"></script>
 <script>
 window.onload=function(){
-	var oDiv1=document.getElementById('div1');
-	var oDiv2=document.getElementById('div2');
-	var oMark=document.getElementById('mark');
-	var oImg2=document.getElementById('img2');
-	
-	oDiv1.onmouseover=function(){
-		oMark.style.display='block';
-		oDiv2.style.display='block';	
-	};
-	oDiv1.onmousemove=function(ev){
-		var oEvt=ev||event;
-		var l=(oEvt.clientX-80)-oMark.offsetWidth/2;
-		var t=(oEvt.clientY-150)-oMark.offsetHeight/2;
-		var w=oDiv1.offsetWidth-oMark.offsetWidth;
-		var h=oDiv1.offsetHeight-oMark.offsetHeight;
-		
-		if(l<0) l=0;
-		if(l>w) l=w;
-		
-		if(t<0) t=0;
-		if(t>h) t=h;
-		
-		oMark.style.left=l+'px';
-		oMark.style.top=t+'px';
-		
-		var oDiv1W=oDiv1.offsetWidth;
-		var oMarkW=oMark.offsetWidth;
-		var oDiv2W=oDiv2.offsetWidth;
-		var oImg2W=oImg2.offsetWidth;
-		
-		var oDiv1H=oDiv1.offsetHeight;
-		var oMarkH=oMark.offsetHeight;
-		var oDiv2H=oDiv2.offsetHeight;
-		var oImg2H=oImg2.offsetHeight;
-		
-		oImg2.style.left=oMark.offsetLeft/(oDiv1W-oMarkW)*(oDiv2W-oImg2W)+'px';
-		oImg2.style.top=oMark.offsetTop/(oDiv1H-oMarkH)*(oDiv2H-oImg2H)+'px';
-		
-	
-		
-	};
-	oDiv1.onmouseout=function(){
-		oMark.style.display='none';
-		oDiv2.style.display='none';	
-	};
+	magnnifier("magnnifier");
 };
 </script>
-<body>
-<div id="div1">
+</head>
+<body style="background:#000;">
+<div id="magnnifier">
 	<img class="img1" src="../images/magnifier.jpg" />
     <div id="mark"></div>
     <div id="div2">

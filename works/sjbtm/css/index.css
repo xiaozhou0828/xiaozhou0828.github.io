@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+
+ .banner{width:100%;height:150px;}
+ .logo{width:100%;height:60px;}
+ .logo h1{width:100%;height:60px;}
+ .logo h1 a{width:100%;height:60px;background:url(../images/logo_bg.png) no-repeat;text-indent:-99999em;}
+ .search{width:100%;height:38px;}
+ .search div{width:292px;border:1px solid #dcdddd;border-right:none;margin-left:10px;}
+ .search .txt{width:257px;height:36px;border:none;float:left;font-size:12px;color:#c0c0c0;text-indent:8px;background:#fff;}
+ .search .btn{width:35px;height:36px;float:left;background:url(../images/btn_bg.png) no-repeat;border-left:none;}
+ .nav{width:320px;height:185px;background:url(../images/nav_bg.png) no-repeat;}
+ .nav ul li{float:left;}
+ .nav ul li a{font-size:12px;color:#666;width:78px;float:left;height:25px;padding-top:65px;text-align:center}
+ .nav_a1{background:url(../images/nav_a1_bg.png) no-repeat center 23px;}
+ .nav_a2{background:url(../images/nav_a2_bg.png) no-repeat center 23px;}
+ .nav_a3{background:url(../images/nav_a3_bg.png) no-repeat center 23px;}
+ .nav_a4{background:url(../images/nav_a4_bg.png) no-repeat center 23px;}
+ .nav_a5{background:url(../images/nav_a5_bg.png) no-repeat center 23px;}
+ .nav_a6{background:url(../images/nav_a6_bg.png) no-repeat center 23px;}
+ .nav_a7{background:url(../images/nav_a7_bg.png) no-repeat center 23px;}
+ .nav_a8{background:url(../images/nav_a8_bg.png) no-repeat center 23px;}
+ 
+ 
+ .xz{width:300px;height:85px;margin:10px auto;background:#fff;font-size:12px;box-shadow:3px 3px 3px #000;}
+ .xz_l{width:240px;height:85px;text-indent:5px;}
+ .xz_l_t{width:100%;height:25px;line-height:20px;}
+ .xz_l_t_a1{color:#333;}
+ .xz_l_t_a2{color:#a1a1a1;}
+ 
+ .xz_l_b{width:100%;height:60px;}
+ .xz_l_b_l{width:69px;height:60px;border-right:1px solid #d1d1d1;}
+ 
+ .xz_l_b_r{width:170px;height:60px;}
+ .xz_l_b_r p{color:#8d8d8d;line-height:20px;}
+ .xz_l_b_r span{color:#f00;}
+ 
+ .xz_r{width:60px;height:85px;text-align:center;line-height:85px;}
+ .xz_r a{color:#8d8d8d;}
+ 
+ .sp{width:300px;height:275px;margin:20px auto;background:#fff;border:1px solid #dedede;box-shadow:3px 3px 3px #000;}
+ .sp li{float:left;width:150px;height:92px;font-size:12px;border-top:1px solid #dedede;border-left:1px solid #dedede;margin:-1px 0 0 -1px;}
+ .sp_li_l{width:61px;height:92px;}
+ .sp_li_r{width:88px;height:92px;}
+ .sp_li_r p{line-height:19px;}
+ .sp_li_r_p1{margin-top:20px;}
+ .sp_li_r_a1{color:#000;}
+ .sp_li_r_a2{color:#b3b3b3;}
+ 
+ .sx{width:300px;height:245px;margin:30px auto 0;}
+ .sx_t{width:300px;height:150px;box-shadow:3px 3px 3px #000;}
+ .sx_t ul{height:150px;width:300px;background:#fff;}
+ .sx_t ul li{float:left;}
+ .sx_t ul li .psd{font-size:12px;color:#373737;margin:20px 0 0 7px;float:left;}
+ .sx_t_li1{width:180px;height:150px;border-right:1px solid #dedede;}
+ .sx_t_li2{width:119px;height:74px;border-bottom:1px solid #dedede;}
+ .sx_t_li2_l{width:63px;height:74px;}
+ .sx_t_li2_r{width:56px;height:74px;}
+ .sx_t_li3{width:119px;height:74px;}
+ .sx_t_li3_l{width:63px;height:74px;}
+ 
+ .sx_b{width:300px;height:77px;font-size:12px;margin-top:15px;}
+ .sx_b ul{width:300px;height:77px;}
+ .sx_b ul li{float:left;}
+ .sx_b ul li a{background:#fff;color:#373737;padding:10px 12px;margin:0 4px 5px 0;float:left;box-shadow:3px 3px 3px #000;}
+ .sx_b ul li .aon{background:#f00;color:#fff;}
+ 
+ 
+
+ .ft_t{width:300px;height:75px;margin:0 auto;border-bottom:1px solid #ccc;box-shadow:3px 3px 3px #000;margin-top:15px;}
+ .ft_c{width:300px;height:40px;margin:15px auto 0;border-top:1px solid #ccc;font-size:12px;}
+ .ft_c_a1{color:#004477;line-height:40px;height:40px;}
+ .ft_c_a2{color:#004477;line-height:40px;height:40px;margin-left:12px;}
+ .ft_c_a3{width:70px;height:30px;margin-top:4px;line-height:30px;text-align:center;color:#fff;background:#f00;box-shadow:3px 3px 3px #000;}
+ .ft_b{width:300px;height:80px;margin:0 auto;text-align:center;border-top:1px solid #ccc;padding-top:12px;font-size:12px;}
+ .ft_b p{line-height:26px;height:26px;width:300px;color:#666;}
+ .ft_b p a{color:#666;}
+ 
+ a:hover{color:#F63;}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

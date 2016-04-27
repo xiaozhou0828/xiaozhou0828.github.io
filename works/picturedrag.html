@@ -2,68 +2,17 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>图片拖拽</title>
-<style>
-*{ margin:0; padding:0; list-style:none; font-family: "微软雅黑","张海山锐线体简"}
-body{ background:#000;}
-#div1{width:100%;height:450px; margin:100px auto; position:relative; background:#000; overflow: hidden;}
-#div1 ul{ position:absolute;left:0;top:135px;}
-#div1 ul li{/* background:red;*/ float: left; position:relative;width:260px;height:179px;}
-#div1 ul li img{ width:260px;height:179px; position:absolute;left:0;top:0; cursor:pointer;}
-#div1 ul li span{font-size:30px;color:#000; background:#fff; position:absolute;left:48%;top:48%;}
-</style>
+<title>图片感应拖拽</title>
+<link href="../css/works.css" rel="stylesheet" />
+<script src="../js/works.js"></script>
 <script>
 window.onload=function(){
-	var oDiv=document.getElementById('div1');
-	var oUl=oDiv.children[0];
-	var aLi=oUl.children;
-	var aImg=oUl.getElementsByTagName('img');
-	var aSpan=oUl.getElementsByTagName('span');
-	oUl.style.width=oUl.children.length*aLi[0].offsetWidth+'px';	
-	oUl.onmousedown=function(ev){
-		var oEvt=ev||event;
-		var disX=oEvt.clientX-oUl.offsetLeft;
-		document.onmousemove=function(ev){
-			var oEvt=ev||event;
-			var l=oEvt.clientX-disX;
-			if(l>oDiv.offsetWidth/2-(0+0.5)*aLi[0].offsetWidth){
-				l=oDiv.offsetWidth/2-(0+0.5)*aLi[0].offsetWidth;
-			}
-			if(l<oDiv.offsetWidth/2-(aLi.length-1+0.5)*aLi[0].offsetWidth){
-				l=oDiv.offsetWidth/2-(aLi.length-1+0.5)*aLi[0].offsetWidth;
-			}
-			oUl.style.left=l+'px';
-			setSize();
-		};	
-		document.onmouseup=function(){
-			document.onmousemove=document.onmouseup=null;	
-		};
-		return false;
-	};
-	function setSize(){
-		for(var i=0;i<aImg.length;i++){
-			var dis=Math.abs(oDiv.offsetWidth/2-(oUl.offsetLeft+aLi[i].offsetLeft+aLi[i].offsetWidth/2));
-			var scale=1-dis/800;	
-			if(scale<0.5) scale=0.5;
-			aImg[i].style.width=520*scale+'px';
-			aImg[i].style.height=358*scale+'px';
-			aImg[i].style.marginLeft=-(aImg[i].offsetWidth-aLi[i].offsetWidth)/2+'px';
-			aImg[i].style.marginTop=-(aImg[i].offsetHeight-aLi[i].offsetHeight)/2+'px';
-			aImg[i].style.zIndex=parseInt(scale*10000);
-			aImg[i].style.opacity=scale+0.1;
-		}	
-	};
-	setCenter(parseInt(aLi.length/2));
-	function setCenter(n){
-		oUl.style.left=oDiv.offsetWidth/2-(n+0.5)*aLi[0].offsetWidth+'px';
-		setSize();
-	};
-	window.onresize=setSize;
+	picturedrag("picturedrag");
 };
 </script>
 </head>
-<body>
-<div id="div1">
+<body style="background:#000;">
+<div id="picturedrag">
 	<ul>
     	<li><img src="../images/l1.jpg" /></li>
         <li><img src="../images/l2.jpg" /></li>

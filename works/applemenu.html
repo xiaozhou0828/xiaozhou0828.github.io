@@ -1,48 +1,31 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>苹果菜单</title>
-<style>
-*{ margin:0; padding:0; list-style:none; font-family: "微软雅黑","张海山锐线体简"}
-body{ background:#000;}
-#div1{width:100%; position:fixed; left:0;bottom:0; text-align:center;}
-img{width:64px; cursor:pointer;}
-</style>
+<title>苹果感应图标</title>
+<link href="../css/works.css" rel="stylesheet" />
+<script src="../js/works.js"></script>
 <script>
 window.onload=function(){
-	var oDiv=document.getElementById('div1');
-	var aImg=oDiv.children;
-	
-	document.onmousemove=function(ev){
-		var oEvt=ev||event;
-		for(var i=0;i<aImg.length;i++){
-			var a = aImg[i].offsetLeft-oEvt.clientX+aImg[i].offsetWidth/2;
-			var b = aImg[i].offsetTop+oDiv.offsetTop-oEvt.clientY+aImg[i].offsetHeight/2;
-			
-			var dis=Math.sqrt(a*a+b*b);
-			var scale=1-dis/300;
-			
-			if(scale<0.5) scale=0.5;
-			
-			aImg[i].style.width=128*scale+'px';
-			aImg[i].style.height=128*scale+'px';
-				
-		}
-	};	
+	apple("apple");	
 };
 </script>
 </head>
-
-<body>
-
-<div id="div1">
-	<img src="../img/app1.png" />
-	<img src="../img/app2.png" />
-	<img src="../img/app3.png" />
-	<img src="../img/app4.png" />
-	<img src="../img/app5.png" />
+<body style="background:#000">
+<div id="apple">
+	<img src="../img/23642.ico" />
+    <img src="../img/23643.ico" />
+    <img src="../img/23644.ico" />
+    <img src="../img/23647.ico" />
+    <img src="../img/23649.ico" />
+	<img src="../img/236410.ico" />
+    <img src="../img/236411.ico" />
+    <img src="../img/236412.ico" />
+    <img src="../img/236413.ico" />
+    <img src="../img/236414.ico" />
+    <img src="../img/236415.ico" />
+    <img src="../img/236416.ico" />
+    <img src="../img/236417.ico" />
 </div>
-
 </body>
 </html>

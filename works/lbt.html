@@ -1,63 +1,19 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>无缝滚动选项卡</title>
-<style>
-* {margin:0; padding:0; list-style:none;}
-body{ background:#000;}
-#div1 {width:520px; height:358px; position:relative; margin:100px auto; overflow:hidden; border:10px solid #f00;}
-#div1 ul {position:absolute; left:0; top:0;}
-#div1 ul li {width:520px; height:358px; float:left;}
-#div1 ol {position:absolute; left:50%; bottom:10px; width:400px; margin-left:-200px;}
-#div1 ol li {width:80px; margin:10px; float:left; background:white; height:10px;}
-#div1 ol li span {display:block; height:10px; background:#03F; width:0;}
-</style>
-<script src="../js/move_.js"></script>
+<title>进度滚动图片</title>
+<link href="../css/works.css" rel="stylesheet" />
+<script src="../js/picc.js"></script>
+<script src="../js/works.js"></script>
 <script>
 window.onload=function(){
-	var oDiv=document.getElementById('div1');
-	var oUl=oDiv.children[0];
-	var oOl=oDiv.children[1];
-	var aLi=oOl.children;
-	var	aSpan=oDiv.children[1].getElementsByTagName('span');
-	var now=0;
-	var ready=true;
-	
-	//指定ul宽
-	oUl.style.width=oUl.children.length*oUl.children[0].offsetWidth+'px';
-	
-	//无限
-	next();
-	function next(){
-		move(aSpan[now],{width:80},{type:'linear',time:1000,fn:function(){
-			for(var i=0;i<aSpan.length;i++){
-				aSpan[i].style.width=0;	
-			}
-			now++;
-			now%=(aSpan.length+1);
-			move(oUl,{left:-now*oUl.children[0].offsetWidth},{fn:function(){
-				if(now == 4){oUl.style.left = 0;now=0;}	
-				if(ready) next();
-			},time:1000});
-		}});
-	};
-	
-	oDiv.onmouseover=function(){
-		ready=false;
-		clearInterval(aSpan[now].timer);
-		aSpan[now].style.width=0;	
-	};
-	oDiv.onmouseout=function(){
-		ready=true;
-		next();	
-	};
+	LBT("lbt1","lbt2");	
 };
 </script>
 </head>
-
-<body>
-<div id="div1">
+<body style="background:#000">
+<div id="lbt1">
 	<ul>
     	<li style="background:#CC6;"><img src="../images/l2.jpg" /></li>
     	<li style="background:#fc0;"><img src="../images/l5.jpg" /></li>
@@ -72,5 +28,21 @@ window.onload=function(){
     	<li><span></span></li>
     </ol>
 </div>
+<div id="lbt2">
+            <p class="prev">&lt;</p>
+            <p class="next">&gt;</p>
+            <ol>
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ol>
+            <ul>
+                <li style="background:#CC6;"><img src="../images/l2.jpg" /></li>
+                <li style="background:#fc0;"><img src="../images/l5.jpg" /></li>
+                <li style="background:#ccF;"><img src="../images/l8.jpg" /></li>
+                <li style="background:#f9f;"><img src="../images/l9.jpg" /></li>
+            </ul>
+    </div>
 </body>
 </html>

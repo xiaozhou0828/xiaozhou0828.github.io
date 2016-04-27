@@ -90,10 +90,10 @@ audio{ margin-left:-8px;}
 .screen2 .moreWorks .tabShow li{width:1080px; height:400px; display:none;}
 .screen2 .moreWorks .tabShow li.show{display:block;}
 .screen2 .moreWorks .tabShow a{float:left; margin:20px; width:230px; height:150px; position:relative; border-radius:20px; overflow:hidden; background:#333; color:#999; text-align:center; line-height:150px; font-size:20px; opacity:0.8;}
-.screen2 .moreWorks .tabShow a i{width:100%; height:100%; position:absolute; left:-230px; top:0; background:#fff; color:#000; text-align:center; line-height:150px; font-size:20px; border-radius:20px; overflow:hidden;}
+.screen2 .moreWorks .tabShow a i{width:100%; height:100%; position:absolute; left:-230px; top:0; background:#fff; color:#000; text-align:center; font-weight:bold; line-height:150px; font-size:20px; border-radius:20px; overflow:hidden;}
 .screen2 .moreWorks .tabBtn{width:80px; height:20px; margin:10px auto 0;}
-.screen2 .moreWorks .tabBtn a{width:20px; height:20px; border-radius:50%; float:left; background:#ccc; margin:0 10px;}
-.screen2 .moreWorks .tabBtn a.on{background:#3FF;}/*ç¬¬ä¸‰å± å…³äºŽæˆ‘*/
+.screen2 .moreWorks .tabBtn a{width:20px; height:20px; border-radius:50%; float:left; background:blue; margin:0 10px;}
+.screen2 .moreWorks .tabBtn a.on{background:red;}/*ç¬¬ä¸‰å± å…³äºŽæˆ‘*/
 .screen3{ position:absolute; top:0;}
 .sidebar{height:100%; width:6%; position:absoluete; left:0; top:0;z-index:9999;}
 .goHome{width:50px; height:50px; background:url(../img/home1.png) no-repeat center; position:absolute; left:15px; top:30%; margin-left:0;}
